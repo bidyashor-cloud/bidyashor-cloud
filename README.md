@@ -108,9 +108,9 @@ The solution follows the **CloudInfraOps architecture**, using multiple tiers fo
 ---
 
 📫 **Connect with Me**
-- 🌐 [LinkedIn](https://www.linkedin.com/in/bidyashor-cloud)  
-- 📧 **bidyashorchingtham12345@gmail.com**  
-- 🐙 [GitHub](https://github.com/bidyashor-cloud)
+-    🌐 LinkedIn: https://www.linkedin.com/in/bidyashor-cloud
+-    📧 Email: bidyashorchingtham12345@gmail.com
+-    🐙 GitHub: https://github.com/bidyashor-cloud
 
 ---
 
