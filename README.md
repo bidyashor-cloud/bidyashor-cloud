@@ -1,5 +1,4 @@
 👋 Hi, I’m **Bidyashor**  
-
 🚀 Building my skills in **cloud technologies**, **infrastructure management**, and **automation** through hands-on projects using **AWS**.
 
 # ☁️ CloudInfraOps – Online Examination Server (AWS Project)
@@ -12,20 +11,25 @@ I worked on building and deploying a **multi-tier cloud infrastructure** to host
 
 ## 🧱 Architecture Overview
 
-This project follows a **3-tier CloudInfraOps architecture** designed for scalability, availability, and security.
+The solution follows the **CloudInfraOps architecture**, using multiple tiers for scalability, availability, and security.
 
 ### **Key Components**
-- **VPC:** Custom network with public, private, and database subnets across two Availability Zones.  
-- **EC2 (Web Tier):** Auto Scaling Group of web servers hosting the application.  
-- **Application Load Balancer:** Distributes traffic evenly across EC2 instances.  
-- **RDS (MySQL):** Managed database for secure exam data storage (Multi-AZ).  
-- **ElastiCache (Redis):** Caching layer for faster performance and session management.  
-- **S3 Buckets:** Used for static assets, backups, and CloudTrail logs.  
-- **IAM:** Access control and least-privilege permissions across AWS services.  
-- **CloudWatch & SNS:** Monitoring, metrics, and alert notifications.  
-- **AWS Backup:** Automated daily backups for RDS and EC2 volumes.  
-- **Systems Manager (SSM):** Secure EC2 access and automation without SSH.  
-- **CloudTrail:** Centralized API activity logging for auditing and compliance.  
+- **VPC:** Custom network with public and private subnets across two Availability Zones.  
+- **EC2 (Web Tier):** Auto Scaling group of EC2 instances hosting the examination application.  
+- **Application Load Balancer:** Distributes incoming traffic evenly across EC2 instances.  
+- **RDS (MySQL):** Managed database deployed in private subnets for secure exam data storage.  
+- **ElastiCache (Redis):** Provides caching to improve application performance.  
+- **S3 Buckets:**  
+  - **S3 Assets Bucket:** Stores static web files and application resources.  
+  - **S3 Data Bucket:** Holds exam-related files and user uploads.  
+  - **S3 Backup Bucket:** Used for automated RDS snapshots and EBS volume backups.  
+  - **S3 CloudTrail Bucket:** Centralized storage for audit and API activity logs.  
+- **IAM:** Manages access control and enforces least-privilege permissions.  
+- **CloudWatch:** Monitors system metrics and triggers alarms for health events.  
+- **SNS:** Sends alert notifications when defined thresholds are breached.  
+- **AWS Backup:** Automates data protection for RDS and EC2 volumes.  
+- **Systems Manager (SSM):** Enables secure EC2 instance management without SSH.  
+- **CloudTrail:** Tracks API activities for auditing and compliance.  
 
 ---
 
@@ -35,35 +39,36 @@ This project follows a **3-tier CloudInfraOps architecture** designed for scalab
 ---
 
 ## 🔐 Security Design
-- Private subnets for RDS and ElastiCache (no public access).  
-- IAM roles with least-privilege permissions.  
+- Deployed databases and caches in private subnets with no public access.  
+- Applied IAM least-privilege roles for each AWS service.  
 - Restricted inbound ports using Security Groups and NACLs.  
-- Managed access via **SSM Session Manager** (no SSH keys).  
-- Encryption at rest (KMS) and in transit (TLS).  
-- CloudTrail enabled for account-level auditing.  
+- Used SSM Session Manager instead of SSH for instance management.  
+- Enforced encryption at rest (KMS) and in transit (TLS).  
+- Enabled CloudTrail to record all API and account activities.  
 
 ---
 
 ## 📊 Monitoring & Alerts
-- **CloudWatch:** Dashboards, metrics, and alarms for EC2, RDS, and ALB.  
-- **SNS:** Email alerts for key resource health events.  
-- **CloudTrail:** Logs all API actions to S3 for auditing.  
-- **AWS Backup:** Automated recovery and data protection.  
+- **CloudWatch:** Configured dashboards, metrics, and alarms for EC2, RDS, and ALB.  
+- **SNS:** Set up notification topics to send alert emails for resource health issues.  
+- **CloudTrail:** Delivered activity logs to S3 for auditing.  
+- **AWS Backup:** Managed daily automated backups.  
 
-**Example Alerts**
+**Sample Alerts**
 - EC2 CPU utilization above 75%  
 - Unhealthy ALB targets  
 - RDS free storage space below 10%  
 
 ---
 
-## 🧠 Key Highlights
-- Built a **secure, scalable, and highly available** AWS infrastructure.  
-- Implemented **Auto Scaling** and **Load Balancer** for fault tolerance.  
-- Used **RDS** and **ElastiCache** in private subnets for better security.  
-- Configured **monitoring and alerts** via CloudWatch and SNS.  
-- Automated **backups and recovery** using AWS Backup.  
-- Followed **AWS Well-Architected Framework** principles.  
+## 🧠 Key Achievements
+- Built a secure and scalable multi-AZ AWS infrastructure from scratch.  
+- Automated web-server provisioning with EC2 user data.  
+- Implemented fault tolerance using Auto Scaling and Load Balancer.  
+- Secured databases and networks using private subnets and IAM policies.  
+- Configured monitoring and alerting using CloudWatch and SNS.  
+- Automated backup and recovery using AWS Backup.  
+- Optimized costs through tagging and resource management.  
 
 ---
 
@@ -71,33 +76,34 @@ This project follows a **3-tier CloudInfraOps architecture** designed for scalab
 
 | **Layer** | **AWS Services** |
 |------------|------------------|
-| **Compute** | EC2 (Amazon Linux 2, Auto Scaling) |
+| **Compute** | EC2 (Amazon Linux 2023 |
 | **Database** | RDS (MySQL) |
 | **Caching** | ElastiCache (Redis) |
-| **Storage** | S3 (Assets, Backups, Logs) |
+| **Storage** | S3 (Assets, Data, Backup, CloudTrail Buckets) |
 | **Networking** | VPC, Subnets, NAT Gateway, IGW, Route Tables |
 | **Monitoring** | CloudWatch, SNS, CloudTrail |
 | **Security** | IAM, Security Groups, KMS, SSM |
-| **Automation** | AWS CLI, CloudFormation, User Data, AWS Backup |
+| **Automation** | AWS CLI, CloudFormation, User Data |
 
 ---
 
-## 🧪 Validation Steps
-1. Verified ALB DNS endpoint to ensure web tier functionality.  
-2. Tested EC2-to-RDS connectivity through app logs.  
-3. Simulated load to validate CloudWatch alarms and scaling.  
-4. Tested SNS email alerts for high CPU and health check failures.  
+## 🧪 Testing and Validation
+1. Accessed the ALB DNS name to confirm the web tier was operational.  
+2. Verified EC2 to RDS connectivity through application logs.  
+3. Simulated load to test CloudWatch alarms and scaling.  
+4. Tested SNS alerts for system performance thresholds.  
 5. Validated RDS snapshot restoration and backup recovery.  
 
 ---
 
 ## 📸 Screenshots
-- VPC and subnet setup  
+- VPC and subnet configuration  
 - ALB and target group health checks  
 - Auto Scaling activity  
-- RDS instance configuration  
+- RDS database details  
 - CloudWatch dashboards and alarms  
-- S3 backup and CloudTrail logs  
+- S3 backup and CloudTrail buckets  
+- CloudTrail logs  
 
 ---
 
