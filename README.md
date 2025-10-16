@@ -1,12 +1,10 @@
 👋 Hi, I’m **Bidyashor**  
-
-🚀 Building skills in **AWS Cloud**, **SysOps**, **cloud administration**, and **automation** through hands-on projects.
+🚀 Building my skills in **cloud technologies**, **infrastructure management**, and **automation** through hands-on projects using **AWS**.
 
 # ☁️ CloudInfraOps – Online Examination Server (AWS Project)
 
 ### 🎯 Objective
-I designed and deployed a **multi-tier cloud infrastructure** on **AWS** to host an **Online Examination Server**.  
-This project demonstrates my ability to build, secure, monitor, and manage scalable AWS environments following SysOps and Cloud Engineer best practices.
+🌱 I’m a fresher exploring AWS Cloud, and this project represents my hands-on learning experience. I worked on building and deploying a multi-tier cloud infrastructure to host an Online Examination Server, focusing on designing, securing, and monitoring a scalable environment following AWS best practices.
 
 ---
 
