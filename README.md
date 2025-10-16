@@ -76,7 +76,7 @@ The solution follows the **CloudInfraOps architecture**, using multiple tiers fo
 
 | **Layer** | **AWS Services** |
 |------------|------------------|
-| **Compute** | EC2 (Amazon Linux 2023 |
+| **Compute** | EC2 (Amazon Linux 2023) |
 | **Database** | RDS (MySQL) |
 | **Caching** | ElastiCache (Redis) |
 | **Storage** | S3 (Assets, Data, Backup, CloudTrail Buckets) |
