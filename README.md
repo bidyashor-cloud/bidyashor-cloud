@@ -1,4 +1,5 @@
 👋 Hi, I’m **Bidyashor**  
+
 🚀 Building my skills in **cloud technologies**, **infrastructure management**, and **automation** through hands-on projects using **AWS**.
 
 # ☁️ CloudInfraOps – Online Examination Server (AWS Project)
@@ -107,4 +108,4 @@ This project follows a **3-tier CloudInfraOps architecture** designed for scalab
 
 ---
 
-> **Summary:** Built and deployed a secure, scalable 3-tier AWS architecture for an Online Examination Server, demonstrating practical cloud design, deployment, and monitoring skills.
+> **Summary:** This project reflects my learning experience in designing, deploying, and managing a secure, scalable 3-tier AWS infrastructure for an Online Examination Server.
